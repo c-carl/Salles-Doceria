@@ -1,12 +1,23 @@
 :root{
     --main-color: #ffeef2;
     --white: #ffffff;
-    --pinkr: #ffcbd7;
+    --pinkr: #fef6fa;
     --black: #13131a;
     --bg: #010103;
     --red: #f42d16;
     --gray: #636363;
     --new: #fffafa;
+    --Rosa50: #fdf2f8;
+    --Rosa100: #fce7f3;
+    --Rosa300: #f9a8d4;
+    --Rosa500: #ec4899;
+    --Rosa600: #e11d48/ #db2777;
+    --Rosa700: #be123c;
+    --Vermelho600: #dc2626;
+    --Vermelho700: #b91c1c;
+    --Branco: #ffffff;
+    --Cinza50: #f9fafb;
+    --Cinza60: #4b5563;
     --border: 0.1rem solid rgba(255,255,255,0.3);
     font-size: 10px;
 }
@@ -22,7 +33,7 @@
 }
 
 body{
-    background-color: var(--main-color);
+    background-color: var(--pinkr);
 }
 
 section{
@@ -38,6 +49,7 @@ section{
     z-index: 99;
     border-bottom: var(--border);
     background-color: var(--white);
+    font-family: 'Roboto', sans-serif;
 }
 
 .header section{
@@ -62,28 +74,39 @@ section{
 
 .navbar a{
     margin: 3rem;
-    font-size: 1.8rem;
-    color: var(--gray);
+    font-size: 1.6rem;
+    color: var(--Cinza60);
 }
 
 .navbar a:hover{
     color: var(--red);
-    border-bottom: 0.1rem solid var(--main-color);
     padding-bottom: 0.5rem;
     font-size: 2rem;
 }
 
-.icons img{
-    margin-left: 2rem;
-    margin-right: 0;
+.icons{
+    width: 26px;
+    height: 26px;
+
+    border: 1.0px solid var(--Cinza60);
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     cursor: pointer;
-    width: 25px;
-    height: auto;
+    overflow: hidden;
+}
+
+.icons img{
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease;
 }
 
 .icons img:hover{
-    width: 35px;
-    height: 35px;
+    background-color: var(--gray);
 }
 
 .home{
@@ -109,13 +132,13 @@ section{
 }
 
 .home .content h3 span{
-    color: var(--red);
+    color: var(--Vermelho600);
 }
 
 .home .content p{
     font-size: 1.6rem;
     line-height: 1.8rem;
-    color: var(--gray);
+    color: var(--Cinza60);
     max-width: 650px;
     text-transform: none;
 }
@@ -138,7 +161,7 @@ section{
 }
 
 .btn{
-    background: var(--red);
+    background: var(--Vermelho600);
     color: #fff;
     padding: 1.2rem 3rem;
     font-size: 1.5rem;
@@ -149,7 +172,6 @@ section{
 .btn:hover{
     background: #c91f0d;
     transform: translateY(-1px);
-    letter-spacing: 0.1rem;
 }
 
 .btn.outline{
@@ -182,4 +204,63 @@ section{
 
 .about-container{
     display: flex; /* Transforma o container em Flexbox, permitindo alinhar elementos lado a lado */
+    gap: 40px; /* Cria espaço entre a imagem e o texto (sem usar margin)*/
+    align-items: center;
+    margin-top: 60px;
+}
+
+.about-image img{
+    width: 350px; /* Evita que ela fique gigante em telas grandes*/
+    margin-top: 37px;
+    border-radius: 3rem;
+}
+
+.about-content{
+    flex: 1; /* Faz essa coluna ocupar todo espaço restante */
+}
+
+.about-content .historia{
+    font-size: 15px;
+    color: var(--Vermelho600) ;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    color: var(--Cinza60);
+    max-width: 650px;
+    text-transform: none;
+}
+
+.caixas{
+    display: flex; /* Coloca as caixas lado a lado */
+    gap: 20px; /* Espaço entre as caixas */
+    margin-top: 30px; /* Afasta as caixas do texto acima */
+}
+
+.caixa{
+    background-color: #fff; /* Cor de fundo da caixa */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Deixar as bordas arredondadas */
+    text-align: center; /* Centraliza texto e ícone */
+    width: 150px; /* Garante que todas tenham o mesmo tamanho */
+}
+
+.caixa h4{
+    font-size: 14px;
+}
+
+.about-content .foco{
+    font-size: 15px;
+    color: var(--black) ;
+}
+
+.about-cont{
+    margin-top: 30px;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-container{
+    background-color: var(--pinkr);
 }
