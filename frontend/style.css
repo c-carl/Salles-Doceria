@@ -5,18 +5,18 @@
     --black: #13131a;
     --bg: #010103;
     --red: #f42d16;
-    --gray: #636363;
+    --gray: #ededed;
     --new: #fffafa;
     --Rosa50: #fdf2f8;
     --Rosa100: #fce7f3;
-    --Rosa300: #f9a8d4;
+    --Rosa300: #ffeaf6;
     --Rosa500: #ec4899;
     --Rosa600: #e11d48/ #db2777;
     --Rosa700: #be123c;
     --Vermelho600: #dc2626;
     --Vermelho700: #b91c1c;
     --Branco: #ffffff;
-    --Cinza50: #f9fafb;
+    --Cinza50: #dfdfdf;
     --Cinza60: #4b5563;
     --border: 0.1rem solid rgba(255,255,255,0.3);
     font-size: 10px;
@@ -85,10 +85,10 @@ section{
 }
 
 .icons{
-    width: 26px;
-    height: 26px;
+    width: 36px;
+    height: 36px;
 
-    border: 1.0px solid var(--Cinza60);
+    border: 0.3px solid var(--Cinza50);
     border-radius: 6px;
 
     display: flex;
@@ -102,11 +102,14 @@ section{
 .icons img{
     width: 20px;
     height: 20px;
-    transition: filter 0.3s ease;
+    transition: filter 0.9s ease;
+    background: var(white);
 }
 
 .icons img:hover{
     background-color: var(--gray);
+    border: 8px solid var(--gray);
+    border-radius: 5px;
 }
 
 .home{
@@ -129,6 +132,7 @@ section{
     font-size: 5rem;
     color: var(--black);
     margin-bottom: 1rem;
+    font-family: "Sora", sans-serif;
 }
 
 .home .content h3 span{
@@ -204,13 +208,15 @@ section{
 
 .about-container{
     display: flex; /* Transforma o container em Flexbox, permitindo alinhar elementos lado a lado */
-    gap: 40px; /* Cria espaço entre a imagem e o texto (sem usar margin)*/
+    gap: 60px; /* Cria espaço entre a imagem e o texto (sem usar margin)*/
     align-items: center;
+
+    padding: 3rem 5%;
     margin-top: 60px;
 }
 
 .about-image img{
-    width: 350px; /* Evita que ela fique gigante em telas grandes*/
+    width: 420px; /* Evita que ela fique gigante em telas grandes*/
     margin-top: 37px;
     border-radius: 3rem;
 }
@@ -221,10 +227,16 @@ section{
 
 .about-content .historia{
     font-size: 15px;
-    color: var(--Vermelho600) ;
+    color: var(--Vermelho600);
+}
+
+.about-content h1{
+    font-size: 32px;
+    font-family: "Sora", sans-serif;
 }
 
 .about-content p{
+    margin-top: 20px;
     font-size: 1.6rem;
     line-height: 1.8rem;
     color: var(--Cinza60);
@@ -232,27 +244,35 @@ section{
     text-transform: none;
 }
 
+.historia{
+    font-family: "Sora", sans-serif;
+}
+
 .caixas{
     display: flex; /* Coloca as caixas lado a lado */
     gap: 20px; /* Espaço entre as caixas */
-    margin-top: 30px; /* Afasta as caixas do texto acima */
+    margin-top: 10px; /* Afasta as caixas do texto acima */
 }
 
 .caixa{
-    background-color: #fff; /* Cor de fundo da caixa */
+    background-color: var(--main-color); /* Cor de fundo da caixa */
     padding: 20px; /* Espaçamento interno */
     border-radius: 10px; /* Deixar as bordas arredondadas */
     text-align: center; /* Centraliza texto e ícone */
     width: 150px; /* Garante que todas tenham o mesmo tamanho */
+    margin-top: 13px;
 }
 
 .caixa h4{
     font-size: 14px;
+    color: var(--black);
+    font-family: "Sora", sans-serif;
 }
 
 .about-content .foco{
     font-size: 15px;
-    color: var(--black) ;
+    color: var(--black);
+    font-family: "Sora", sans-serif;
 }
 
 .about-cont{
